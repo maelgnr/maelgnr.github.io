@@ -1,0 +1,95 @@
+<div class="container py-5">
+  <div class="row pb-4 justify-content-center">
+    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+      <div class="row p-4 text-center">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Mon cursus</h5>
+            <hr>
+            <button type="button" class="btn btn-primary ms-2 mb-2" (click)="getUsers()">DUT Génie Biologique Option Analyse Biologique et Biochimique</button>
+            <button type="button" class="btn btn-primary ms-2 mb-2" (click)="resetUsers()">Master Génie Physiologique Biotechnologique et Informatique Option Biotech</button>
+          </div>
+        </div>
+        <div *ngIf="!loaded">
+          <div class="spinner-grow text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-secondary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-success" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-danger" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-warning" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-info" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow text-dark" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+      <div class="row p-4">
+        <div class="table-responsive nga-httpclient-table blue-gradient" *ngIf="loaded">
+          <table class="table table-hover table-striped table-responsive-md text-center">
+            <thead>
+              <tr>
+                <th>DUT1</th>
+                <th>DUT2</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mathématiques</td>
+                <td>Biochimie</td>
+              </tr>
+              <tr>
+                <td>Physique</td>
+                <td>Hématologie</td>
+              </tr>
+              <tr>
+                <td>Outil informatique</td>
+                <td>Immunologie</td>
+              </tr>
+              <tr>
+                <td>Chimie</td>
+                <td>Bactériologie</td>
+              </tr>
+              <tr>
+                <td>Biochimie</td>
+                <td>Mycologie</td>
+              </tr>
+              <tr>
+                <td>Physiologie</td>
+                <td>Pharmacologie</td>
+              </tr>
+              <tr>
+                <td>Biologie moléculaire</td>
+                <td>Biologie cellulaire</td>
+              </tr>
+              <tr>
+                <td>Microbiologie</td>
+                <td>Bioinformatique</td>
+              </tr>
+              <tr>
+                <td>Anglais</td>
+                <td>Anglais</td>
+              </tr>
+              <tr>
+                <td>Expression Communication</td>
+                <td>Automatisme et instrumentation</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
